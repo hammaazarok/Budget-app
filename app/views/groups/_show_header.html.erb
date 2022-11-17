@@ -1,0 +1,8 @@
+<header class="w-100 flex justify-between items-center px-2 pl-1 pr-1" id="header-login">
+	<%=link_to root_path do %>
+	     &#8249;
+	<%end%>
+	<p class="f-4 login-title">TRANSACTIONS</p>
+	<%= button_to 'Sign out', destroy_user_session_path, method: :delete,
+	 class:'sign-out fw-6' %>
+</header>	
