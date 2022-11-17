@@ -1,0 +1,8 @@
+<header class="w-100 flex justify-between items-center px-2 pt-1 pb-1" id="header-login">
+	<%=link_to group_path(@group) do %>
+	     &#8249;
+	<%end%>
+	<p class="f-4 login-title">NEW TRANSACTION</p>
+	<%= button_to 'Sign Out', destroy_user_session_path, method: :delete,
+	 class:'sign-out fw-6' %>
+</header>	
