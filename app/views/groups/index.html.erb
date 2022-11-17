@@ -1,0 +1,23 @@
+<section class="h-100 flex flex-column items-center">
+ <%= render 'index_header' %>
+  <p class="f-3 green tc fw-6"><%= notice %></p>
+  <p class="f-3 red tc fw-6"><%= alert %></p>
+ <main class="w-100 bg-gray-100 pb-3 flex flex-column" style="gap:1rem;flex:1">
+    <p class="bg-white flex justify-between f-4 px-3 fw-6">
+        <span class="o-50">Total categories amount</span>
+        <span><%="$#{@groups.joins(:payments).sum(:amount)}"%></span>
+    </p>
+ <%if @groups.length.positive?%>  
+ <% @groups.each do |group| %>
+    <%= link_to group_path(group) do %>
+      <%=render group %>
+    <%end%> 
+ <%end%>
+ <%end%>
+</main>
+ <div class='new-category pt-3 pb-3 w-100 flex justify-center'>
+    <%=link_to new_group_path, class:'w-90 tc pa-3 ba b--white' do%>
+        <button class="f-3 fw-5">New category</button>
+    <%end%>
+ </div>	
+</section>

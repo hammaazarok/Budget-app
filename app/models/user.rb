@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable
   has_many :groups
-  has_many :payments
+  has_many :payments, foreign_key: 'author_id'
 
   validates :name, presence: true, length: { minimum: 3 }
   validates :email, presence: true, uniqueness: true, length: { minimum: 3 },
