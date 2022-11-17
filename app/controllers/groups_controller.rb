@@ -1,5 +1,4 @@
 class GroupsController < ApplicationController
-
   def index
     @user = current_user
     @groups = @user.groups.includes(:payments)
@@ -13,12 +12,12 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @icons  = [
-      {id:0, url: 'https://img.icons8.com/ios/50/000000/food.png', name: 'Food'}, 
-      {id:1, url: 'https://img.icons8.com/ios/50/000000/transportation', name: 'Transport'},
-      {id:2, url: 'https://img.icons8.com/ios/50/000000/health-book.png', name: 'Health'},
-      {id:3, url: 'https://img.icons8.com/ios/50/000000/education.png', name: 'Education'},
-      {id:4, url: 'https://img.icons8.com/ios/50/000000/movie-projector.png', name: 'Entertainment'},
+    @icons = [
+      { id: 0, url: 'https://img.icons8.com/ios/50/000000/food.png', name: 'Food' },
+      { id: 1, url: 'https://img.icons8.com/ios/50/000000/transportation', name: 'Transport' },
+      { id: 2, url: 'https://img.icons8.com/ios/50/000000/health-book.png', name: 'Health' },
+      { id: 3, url: 'https://img.icons8.com/ios/50/000000/education.png', name: 'Education' },
+      { id: 4, url: 'https://img.icons8.com/ios/50/000000/movie-projector.png', name: 'Entertainment' }
     ]
   end
 
@@ -37,5 +36,4 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon, :payment_id)
   end
-
 end
