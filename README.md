@@ -7,7 +7,8 @@ Budget App
 This is a Ruby on Rails app that allows user to create, and list payements grouped by related categories that spent on. 
 
 ## Live Link
- [Live-demo](https://tranquil-crag-64773.herokuapp.com/users/sign_in)
+ [Live-demo](https://peaceful-tor-21351.herokuapp.com/)
+
 ## Built With
 
 - Languages:
@@ -101,12 +102,10 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+- Original Design by : [Gregoire Vella](https://www.behance.net/gregoirevella)
 - Microverse
 - LazyCoders
 - Coding Partners
-- Inspiration
-- etc
 
 ## 📝 License
 
