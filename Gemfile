@@ -45,7 +45,6 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 gem 'cancancan'
-gem 'cssbundling-rails'
 gem 'devise'
 gem 'image-picker-rails'
 gem 'jquery-rails'
