@@ -1,5 +1,5 @@
- <%= render 'header_for_new'%>
- <section class="flex flex-column items-center mt3" style="gap:1rem">
+  <%= render 'header_for_new'%>
+<section  class="flex flex-column items-center mt3" style="gap:1rem">
 <p class="f3 fw6">Add Category</p>
 <%=form_with(model: @group, url: groups_url,html: {class: "flex flex-column items-center w-100"}) do |f| %>
   <% if @group.errors.any? %>
@@ -26,6 +26,4 @@
   <div>
     <%= f.submit :Save, class:'submit-new-cat-trans px-4 py-2 ' %>
   </div>  
-  <script>
-  </script>
 <% end %>
