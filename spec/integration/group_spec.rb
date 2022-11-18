@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'groups test', type: :feature do
   before :each do
-    @user = User.find_by(email: 'hammaazarok@gmail.com') || @user = User.create!(name: 'Hamma', email: 'hammaazarok@gmail.com', password: '123456')
+    User.destroy_all
+    @user = User.create!(name: 'Hamma', email: 'hammaazarok@gmail.com', password: '123456')
     @group = Group.new(user: @user, name: 'foods', icon: 'food icon')
   end
- 
+
   it 'can get root without login' do
     visit groups_path
     expect(page).to have_content 'Budget Savings'
