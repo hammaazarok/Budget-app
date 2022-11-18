@@ -1,0 +1,8 @@
+<header class="w-100 flex justify-between items-center px-2 pt-1 pb-1" id="header-login">
+	<%=link_to root_path do %>
+	     &#8249;
+	<%end%>
+	<p class="f4 login-title">NEW CATEGORY</p>
+	<%= button_to 'Sign out', destroy_user_session_path, method: :delete,
+	 class:'sign-out fw6' %>
+</header>	

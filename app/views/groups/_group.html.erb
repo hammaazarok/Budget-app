@@ -1,0 +1,5 @@
+<section class="w-90 bg-white mx-3 p-2 rounded-md shadow-md flex items-center" style="gap:1rem">
+	<img class="w-20 w-20m w10ns" alt="category image" src="<%=group.icon%>">
+	<p class="f-5" style="flex:1.5"><%=group.name%></p>
+	<p class="f-5 fw-6 font-black" style="flex:0"><%="$#{group.payments.sum(:amount)}"%></p>
+</section>	
